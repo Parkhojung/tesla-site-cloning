@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>TESLA</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <div class="nav">
+        <h2>
+            <a href="./index.html">TESLA</a>
+        </h2>
+        <ul>
+            <li><a href="">MODEL S</a></li>
+            <li><a href="">MODEL 3</a></li>
+            <li><a href="">MODEL X</a></li>
+            <li><a href="">MODEL Y</a></li>
+            <li><a href="">CYBERTRUCK</a></li>
+            <li><a href="">ROADSTER</a></li>
+            <li><a href="">ENERGY</a></li>
+        </ul>
+        <div class="right">
+            <a id="login" href="">로그인</a>
+            <div class="bar" onclick="menu_click(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+    </div>
+    <ul id="menu-bar">
+                <li><a href="">법인 판매</a></li>
+                <li><a href="">TESLA 찾기</a></li>
+                <li><a href="">지원</a></li>
+                <li><a href="">뉴스레터 받기</a></li>
+                <li><a href="">새 소식</a></li>
+                <li><a href="">충전</a></li>
+                <li><a href="">대한민국</a></li>
+            </ul>
+    
+    <div class="main-visual idx1">
+        <h2>Model 3</h2>
+        <a href="">지금 주문하기</a>
+    </div>
+    <div class="main-visual idx2">
+        <h2>Tesla 알아보기</h2>
+        <a href="">시승 신청</a>
+        <video autoplay muted loop id="myVideo">
+            <source src="img/hero-video.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="main-visual idx3">
+        <h2>모든 전력을 공급</h2>
+        <a href="">자세히 알아보기</a>
+    </div>
+    <div class="main-visual idx4">
+        <h2>Model Y</h2>
+        <a href="">자세히 알아보기</a>
+    </div>
+    
+    <div class="footer">
+        <div class="link">
+            <ul>
+                <li><a href="">Tesla © 2020</a></li>
+                <li><a href="">개인정보 처리방침 및 법적고지</a></li>
+                <li><a href="">연락처</a></li>
+                <li><a href="">채용정보</a></li>
+                <li><a href="">뉴스레터 받기</a></li>
+                <li><a href="">위치</a></li>
+            </ul>
+        </div>
+        <div class="info">
+            <ul>
+                <li>사업자등록번호 : 524-88-00237</li>
+                <li>마크해수스썰다, 데이비드존 파인스타인</li>
+                <li>주소 : 서울특별시 강남구 영동대로 730</li>
+                <li>대표전화 : 080-822-0291</li>
+                <li>southkorea@tesla.com</li>
+            </ul>
+        </div>
+    </div>
+    
+<script>
+
+/*menu-bar click function */
+function menu_click(x) {
+    /*bar click event*/
+    x.classList.toggle("change");
+
+    /*menu-bar event*/
+    var bar_menu = document.getElementById('menu-bar');
+
+    if (bar_menu.style.display === 'block') {
+        bar_menu.style.display = 'none';
+        document.querySelector("#login").style.display = 'inline';
+        document.querySelector(".bar1").style.backgroundColor = 'white';
+        document.querySelector(".bar3").style.backgroundColor = 'white';
+    } else {
+        bar_menu.style.display = 'block';
+        document.querySelector("#login").style.display = 'none';
+        document.querySelector(".bar1").style.backgroundColor = 'black';
+        document.querySelector(".bar3").style.backgroundColor = 'black';
+    }
+}
+
+</script>
+
+</body>
+</html>
